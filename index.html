@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Comeback — In your corner, every day</title>
+<meta name="description" content="Personalised fitness coaching on WhatsApp. Custom macros, a training plan built around you, and daily check-ins. Now taking pilot clients.">
+<meta property="og:title" content="The Comeback">
+<meta property="og:description" content="In your corner, every day. Custom macros, training built for you, daily check-ins — all on WhatsApp.">
+<meta property="og:type" content="website">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+  :root{
+    --bg:#0B0B0C; --panel:#141415; --ink:#F2F1ED; --dim:#8A8A86; --signal:#E8341C; --line:#2A2A2B;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ background:var(--bg); color:var(--ink); font-family:'Space Grotesk',sans-serif; line-height:1.5; }
+  .wrap{ max-width:1000px; margin:0 auto; padding:0 24px; }
+
+  /* nav */
+  nav{ display:flex; align-items:center; justify-content:space-between; padding:24px 0; border-bottom:1px solid var(--line); }
+  .logo{ display:flex; align-items:center; gap:12px; }
+  .logo svg{ width:34px; height:29px; }
+  .logo .name{ font-weight:700; font-size:18px; letter-spacing:-0.3px; }
+  nav .cta-sm{ font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--signal); text-decoration:none; border:1px solid var(--signal); padding:8px 14px; border-radius:3px; }
+
+  /* hero */
+  .hero{ padding:90px 0 70px; }
+  .eyebrow{ font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:3px; text-transform:uppercase; color:var(--signal); margin-bottom:24px; display:flex; align-items:center; gap:8px; }
+  .eyebrow .dot{ width:8px; height:8px; background:var(--signal); border-radius:50%; display:inline-block; }
+  h1{ font-size:clamp(48px,9vw,92px); line-height:0.95; letter-spacing:-0.02em; font-weight:700; }
+  h1 .strike{ display:block; font-size:0.32em; color:var(--dim); text-decoration:line-through; text-decoration-color:var(--signal); text-decoration-thickness:4px; font-weight:500; margin-bottom:14px; }
+  .hero p{ font-size:19px; color:var(--dim); max-width:48ch; margin-top:28px; }
+  .btn-row{ margin-top:40px; display:flex; gap:14px; flex-wrap:wrap; }
+  .btn{ font-family:'JetBrains Mono',monospace; font-weight:700; font-size:14px; letter-spacing:1px; text-transform:uppercase; text-decoration:none; padding:18px 28px; border-radius:4px; display:inline-flex; align-items:center; gap:10px; }
+  .btn-primary{ background:var(--signal); color:var(--bg); }
+  .btn-secondary{ background:transparent; color:var(--ink); border:1px solid var(--line); }
+
+  /* how it works */
+  .section{ padding:70px 0; border-top:1px solid var(--line); }
+  .section-label{ font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:3px; text-transform:uppercase; color:var(--signal); margin-bottom:36px; }
+  .steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .step{ background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:28px; }
+  .step .n{ font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--signal); }
+  .step h3{ font-size:22px; margin:14px 0 8px; }
+  .step p{ color:var(--dim); font-size:15px; }
+
+  /* protocol row */
+  .protocol .row{ display:flex; justify-content:space-between; align-items:baseline; font-family:'JetBrains Mono',monospace; font-size:14px; padding:16px 0; border-top:1px solid var(--line); }
+  .protocol .row .k{ color:var(--dim); } .protocol .row .v{ font-weight:500; }
+
+  /* cta band */
+  .cta-band{ background:var(--signal); color:var(--bg); border-radius:8px; padding:48px; text-align:center; margin:70px 0; }
+  .cta-band h2{ font-size:36px; letter-spacing:-0.5px; }
+  .cta-band p{ margin:12px 0 28px; font-weight:500; }
+  .cta-band .btn-dark{ background:var(--bg); color:var(--ink); font-family:'JetBrains Mono',monospace; font-weight:700; font-size:15px; letter-spacing:1px; text-transform:uppercase; text-decoration:none; padding:18px 32px; border-radius:4px; display:inline-block; }
+
+  footer{ border-top:1px solid var(--line); padding:40px 0; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--dim); letter-spacing:1px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+
+  @media (max-width:680px){
+    .steps{ grid-template-columns:1fr; }
+    nav .cta-sm{ display:none; }
+    .cta-band{ padding:32px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <div class="logo">
+      <svg viewBox="0 0 120 110">
+        <path d="M6,70 L60,26 L114,70" fill="none" stroke="#F2F1ED" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22,100 L60,70 L98,100" fill="none" stroke="#E8341C" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="name">THE COMEBACK</span>
+    </div>
+    <a class="cta-sm" href="https://wa.me/6589898786?text=Hi%20%E2%80%94%20I%27m%20interested%20in%20taking%20part%20in%20the%20pilot%20group">Join the Pilot</a>
+  </nav>
+
+  <section class="hero">
+    <div class="eyebrow"><span class="dot"></span> Now taking pilot clients</div>
+    <h1><span class="strike">No time to plan</span>THE COMEBACK</h1>
+    <p>Your coach, in your corner — every day, on WhatsApp. Answer a few questions, get your macros and training plan, and check in daily. No app to download.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://wa.me/6589898786?text=Hi%20%E2%80%94%20I%27m%20interested%20in%20taking%20part%20in%20the%20pilot%20group">Join the Pilot →</a>
+      <a class="btn btn-secondary" href="#how">How it works</a>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="section-label">How it works</div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>Quick questionnaire</h3><p>A few questions about your goals, lifestyle and training — about 5 minutes.</p></div>
+      <div class="step"><div class="n">02</div><h3>Your plan, built for you</h3><p>Personalised macros and a strength &amp; conditioning programme matched to your level and equipment.</p></div>
+      <div class="step"><div class="n">03</div><h3>Daily check-ins</h3><p>A daily nudge on food, training and steps — accountability that keeps you consistent.</p></div>
+    </div>
+  </section>
+
+  <section class="section protocol">
+    <div class="section-label">What you get</div>
+    <div class="row"><span class="k">NUTRITION</span><span class="v">CUSTOM MACROS</span></div>
+    <div class="row"><span class="k">TRAINING</span><span class="v">STRENGTH &amp; CONDITIONING PROGRAMME</span></div>
+    <div class="row"><span class="k">ACCOUNTABILITY</span><span class="v">DAILY CHECK-INS</span></div>
+    <div class="row"><span class="k">PLATFORM</span><span class="v">ALL ON WHATSAPP — NO APP</span></div>
+  </section>
+
+  <section class="cta-band">
+    <h2>Ready for your comeback?</h2>
+    <p>Limited pilot spots. No sign-up fee. Starts the moment you message.</p>
+    <a class="btn-dark" href="https://wa.me/6589898786?text=Hi%20%E2%80%94%20I%27m%20interested%20in%20taking%20part%20in%20the%20pilot%20group">Join the Pilot →</a>
+  </section>
+
+  <footer>
+    <span>THE COMEBACK · IN YOUR CORNER, EVERY DAY</span>
+    <span>+65 8989 8786</span>
+  </footer>
+
+</div>
+
+<!-- NOTE: the "Join the Pilot" buttons currently link to WhatsApp.
+     When your Google Form is ready, replace every https://wa.me/6589898786?text=Hi%20%E2%80%94%20I%27m%20interested%20in%20taking%20part%20in%20the%20pilot%20group
+     with your form link (or keep WhatsApp — your choice). -->
+</body>
+</html>
